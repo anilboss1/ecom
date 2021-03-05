@@ -1,0 +1,42 @@
+Routing
+conventional based :: based on startup.cs file
+attribute based :: based on attributes of controller and actions
+controller based routing::
+ [Route("main/[Controller]")]
+    public class TestController : Controller
+    {
+        public IActionResult Index( int a)
+        {
+            return Ok(a);
+        }
+    }
+
+
+Model binding:
+Instead of passing values in the controller methods(e.g. above function), we can pass whole model called as Model binding.
+complex data type are accepted.
+
+
+Data Annotation:
+for data validation
+[required]
+[stringLength()]
+public string lastname{get;set;}
+
+
+
+#ctor for constructor
+
+strongly typed and weakly typed:view bag and view data
+
+
+
+
+
+
+
+
+to link css file::::: @{var myStyleSheet = "~/Shared/Site.css";}
+
+<!-- This creates a link to the CSS file. -->
+<link rel="stylesheet" type="text/css" href="@Href(myStyleSheet)" />
